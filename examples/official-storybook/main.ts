@@ -40,6 +40,7 @@ const config: StorybookConfig = {
     interactionsDebugger: true,
     breakingChangesV7: false,
     storyStoreV7: false,
+    previewMdx2: true,
   },
   staticDirs: [
     './statics/public',

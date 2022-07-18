@@ -68,9 +68,9 @@
     "lint": "yarn lint:js && yarn lint:md",
     "lint:ejs": "ejslint **/*.ejs",
     "lint:js": "yarn lint:js:cmd .  --quiet",
-    "lint:other": "prettier --write '**/*.{css,html,json,md,mdx,yml}'",
     "lint:js:cmd": "cross-env NODE_ENV=production eslint --cache --cache-location=.cache/eslint --ext .js,.jsx,.json,.html,.ts,.tsx,.mjs --report-unused-disable-directives",
     "lint:md": "remark -q .",
+    "lint:other": "prettier --write '**/*.{css,html,json,md,yml}'",
     "lint:package": "sort-package-json",
     "local-registry": "ts-node --project=./scripts/tsconfig.json ./scripts/run-registry.ts ",
     "publish:debug": "npm run publish:latest -- --npm-tag=debug --no-push",
@@ -102,7 +102,7 @@
     "*.ejs": [
       "ejslint"
     ],
-    "*.{css,html,json,md,mdx,yml}": [
+    "*.{css,html,json,md,yml}": [
       "prettier --write"
     ]
   },
