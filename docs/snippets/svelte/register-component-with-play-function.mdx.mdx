@@ -16,14 +16,14 @@ import RegistrationForm from './RegistrationForm.svelte';
 -->
 
 <Story
-  name="FilledForm"
-  play={ async () => {
-    const emailInput = screen.getByLabelText('email', {
-      selector: 'input',
-    });
-    await userEvent.type(emailInput, 'example-email@email.com', {
-      delay: 100,
-    });
+name="FilledForm"
+play={ async () => {
+const emailInput = screen.getByLabelText('email', {
+selector: 'input',
+});
+await userEvent.type(emailInput, 'example-email@email.com', {
+delay: 100,
+});
 
     const passwordInput = screen.getByLabelText('password', {
       selector: 'input',
@@ -35,9 +35,10 @@ import RegistrationForm from './RegistrationForm.svelte';
     // See https://storybook.js.org/docs/7.0/svelte/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
     const submitButton = screen.getByRole('button');
     await userEvent.click(submitButton);
-  }
-  render={() => ({
-    component: RegistrationForm,
-    props: {},
-  })} />
+
+}
+render={() => ({
+component: RegistrationForm,
+props: {},
+})} />
 ```

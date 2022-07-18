@@ -36,7 +36,7 @@ import LoginForm from './LoginForm.svelte';
 
       // 👇 Simulate interactions
       await userEvent.type(canvas.getByTestId('email'), 'email@provider.com');
-      
+
       await userEvent.type(canvas.getByTestId('password'), 'a-random-password');
 
       // See https://storybook.js.org/docs/7.0/svelte/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
@@ -49,5 +49,6 @@ import LoginForm from './LoginForm.svelte';
         )
       ).toBeInTheDocument();
     }} />
+
 </Canvas>
 ```

@@ -15,23 +15,23 @@ import MyComponent from './MyComponent.vue';
   to learn how to use render functions.
 -->
 
-<Story 
-  name="ExampleWithRole"
-  play={ async () => {
-    // See https://storybook.js.org/docs/7.0/vue/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
-    await userEvent.click(screen.getByRole('button'));
-  }}
-  render={() => ({
-    components: { MyComponent },
-    template: '<MyComponent/>',
-  })} />
-<Story 
-  name="ExampleWithText" 
-  play={ async () => {
-    await screen.findByText('example string');
-  }}
-  render={() => ({
-    components: { MyComponent },
-    template: '<MyComponent/>',
-  })} />
+<Story
+name="ExampleWithRole"
+play={ async () => {
+// See https://storybook.js.org/docs/7.0/vue/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
+await userEvent.click(screen.getByRole('button'));
+}}
+render={() => ({
+components: { MyComponent },
+template: '<MyComponent/>',
+})} />
+<Story
+name="ExampleWithText"
+play={ async () => {
+await screen.findByText('example string');
+}}
+render={() => ({
+components: { MyComponent },
+template: '<MyComponent/>',
+})} />
 ```

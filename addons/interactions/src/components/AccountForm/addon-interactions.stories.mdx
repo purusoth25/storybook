@@ -22,12 +22,15 @@ import { AccountForm } from './AccountForm';
       passwordVerification: false,
     }}
     play={async (context) => {
-      const { args, canvasElement } = context
-      const canvas = within(canvasElement)
-      
-      await userEvent.type(canvas.getByTestId('email'), 'username@email.com')
-      await userEvent.type(canvas.getByTestId('password1'), 'thepassword')
-      await userEvent.click(canvas.getByRole('button', { name: /create account/i }))
-      expect(args.onSubmit).not.toHaveBeenCalled()
-    }}/>
+      const { args, canvasElement } = context;
+      const canvas = within(canvasElement);
+
+      await userEvent.type(canvas.getByTestId('email'), 'username@email.com');
+      await userEvent.type(canvas.getByTestId('password1'), 'thepassword');
+      await userEvent.click(canvas.getByRole('button', { name: /create account/i }));
+      expect(args.onSubmit).not.toHaveBeenCalled();
+    }}
+
+/>
+
 </Canvas>

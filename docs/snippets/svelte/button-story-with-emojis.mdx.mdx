@@ -13,31 +13,31 @@ import Button from './Button.svelte';
   to learn how to use render functions.
 -->
 
-<Story 
-  name="Primary"
-  render={() => ({
-    Component: Button,
-    props: {
-      backgroundColor: '#ff0',
-      label: 'Button',
-    }
-  })} />
-<Story 
-  name="Secondary"
-  render={() => ({
-    Component: Button,
-    props: {
-      background: '#ff0',
-      label: '😄👍😍💯',
-    },
-  })} />
-<Story 
-  name="Tertiary"
-  render={() => ({
-    Component: Button,
-    props: {
-      background: '#ff0',
-      label: '📚📕📈🤓',
-    },
-  })} />
+<Story
+name="Primary"
+render={() => ({
+Component: Button,
+props: {
+backgroundColor: '#ff0',
+label: 'Button',
+}
+})} />
+<Story
+name="Secondary"
+render={() => ({
+Component: Button,
+props: {
+background: '#ff0',
+label: '😄👍😍💯',
+},
+})} />
+<Story
+name="Tertiary"
+render={() => ({
+Component: Button,
+props: {
+background: '#ff0',
+label: '📚📕📈🤓',
+},
+})} />
 ```

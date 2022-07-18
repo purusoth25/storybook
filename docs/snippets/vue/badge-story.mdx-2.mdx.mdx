@@ -17,17 +17,17 @@ import Badge from './Badge.vue';
 
 Let's define a story for our `Badge` component:
 
-<Story 
-  name="positive"
-  args={{
+<Story
+name="positive"
+args={{
     status: 'positive',
     label: 'Positive',
   }}
-  render={(args, { argTypes }) => ({
-    props: Object.keys(argTypes),
-    components: { Badge },
-    template: '<Badge v-bind="$props" />',
-  })} />
+render={(args, { argTypes }) => ({
+props: Object.keys(argTypes),
+components: { Badge },
+template: '<Badge v-bind="$props" />',
+})} />
 
 We can drop it in a `Canvas` to get a code snippet:
 

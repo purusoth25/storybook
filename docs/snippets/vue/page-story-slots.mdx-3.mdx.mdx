@@ -14,21 +14,15 @@ import Page from './Page.vue';
 -->
 
 <Story
-  name="CustomFooter"
-  args={{
+name="CustomFooter"
+args={{
    footer: '<a href="https://storybook.js.org/">Built with Storybook</a>',
   }}
-  render={(args) => ({
-    components: { Page },
-    setup() {
-      return { args };
-    },
-    template: `
-      <page v-bind="args">
-        <template v-slot:footer>
-          <footer v-if="args.footer" v-html="args.footer" />
-        </template>
-      </page>
-    `,
-  })} />
+render={(args) => ({
+components: { Page },
+setup() {
+return { args };
+},
+template: `<page v-bind="args"> <template v-slot:footer> <footer v-if="args.footer" v-html="args.footer" /> </template> </page>`,
+})} />
 ```

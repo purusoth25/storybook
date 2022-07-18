@@ -1,10 +1,9 @@
-
 ```ts
 // List.stories.ts
 
 import type { Meta, Story } from '@storybook/html';
 
-import { createList, ListArgs } from  './List';
+import { createList, ListArgs } from './List';
 import { createListItem } from './ListItem';
 
 export default {
@@ -17,7 +16,7 @@ export default {
  * to learn how to use render functions.
  */
 export const Empty: Story = {
-  render: () => createList(args) 
+  render: () => createList(args),
 };
 
 export const OneItem: Story = {

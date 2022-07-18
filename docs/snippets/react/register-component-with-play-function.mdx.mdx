@@ -10,11 +10,11 @@ import { RegistrationForm } from './RegistrationForm';
 <Meta title="RegistrationForm" component={RegistrationForm} />
 
 <Story
-  name="FilledForm"
-  play={ async () => {
-    const emailInput = screen.getByLabelText('email', {
-      selector: 'input',
-    });
+name="FilledForm"
+play={ async () => {
+const emailInput = screen.getByLabelText('email', {
+selector: 'input',
+});
 
     await userEvent.type(emailInput, 'example-email@email.com', {
       delay: 100,
@@ -31,7 +31,8 @@ import { RegistrationForm } from './RegistrationForm';
     const submitButton = screen.getByRole('button');
 
     await userEvent.click(submitButton);
-  }}>
-  <RegistrationForm />
+
+}}>
+<RegistrationForm />
 </Story>
 ```

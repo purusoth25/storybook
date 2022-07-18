@@ -25,29 +25,29 @@ import Button from './Button.vue';
 ## This is an accessible story
 
 <Story
-  name="Accessible"
-  args={{
+name="Accessible"
+args={{
     primary: false,
     label: 'Button'
   }}
-  render={(args, { argTypes }) => ({
-    props: Object.keys(argTypes),
-    components: { Button },
-    template: '<Button v-bind="$props" v-on="$props" />',
-  })} />
+render={(args, { argTypes }) => ({
+props: Object.keys(argTypes),
+components: { Button },
+template: '<Button v-bind="$props" v-on="$props" />',
+})} />
 
 ## This is not
 
 <Story
-  name="Inaccessible"
-  args={{
+name="Inaccessible"
+args={{
     primary: false,
     label: 'Button',
     backgroundColor: 'red'
   }}
-  render={(args, { argTypes }) => ({
-    props: Object.keys(argTypes),
-    components: { Button },
-    template: '<Button v-bind="$props" v-on="$props" />',
-  })} />
+render={(args, { argTypes }) => ({
+props: Object.keys(argTypes),
+components: { Button },
+template: '<Button v-bind="$props" v-on="$props" />',
+})} />
 ```

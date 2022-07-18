@@ -16,9 +16,9 @@ import MyComponent from './MyComponent.svelte';
 -->
 
 <Story
-  name="DelayedStory"
-  play={ async () => {
-    const exampleElement= screen.getByLabelText('example-element');
+name="DelayedStory"
+play={ async () => {
+const exampleElement= screen.getByLabelText('example-element');
 
     // The delay option set the amount of milliseconds between characters being typed
     await userEvent.type(exampleElement, 'random string', {
@@ -29,9 +29,10 @@ import MyComponent from './MyComponent.svelte';
     await userEvent.type(AnotherExampleElement, 'another random string', {
       delay: 100,
     });
-  }}
-  render={(args) => ({
-    Component: MyComponent,
-    props: args,
-  })} />
+
+}}
+render={(args) => ({
+Component: MyComponent,
+props: args,
+})} />
 ```

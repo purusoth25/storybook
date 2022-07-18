@@ -16,20 +16,21 @@ import { TR } from './TableRow';
 -->
 
 <Story
-  name="Numeric"
-  args={{
+name="Numeric"
+args={{
     data: [[1, 2, 3], [4, 5, 6]],
     size: 'large',
   }}
-  render={({data, ...args})=>(
-    <Table {...args}>
-      {data.map((row) => (
-        <TR>
-          {row.map((item) => (
-            <TD>{item}</TD>
-          ))}
-        </TR>
-      ))}
-    </Table>
-  )}/>
+render={({data, ...args})=>(
+
+<Table {...args}>
+{data.map((row) => (
+<TR>
+{row.map((item) => (
+<TD>{item}</TD>
+))}
+</TR>
+))}
+</Table>
+)}/>
 ```

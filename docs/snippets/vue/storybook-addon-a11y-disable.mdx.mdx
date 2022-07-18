@@ -10,18 +10,18 @@ import MyComponent from './MyComponent.vue';
   component={MyComponent} />
 
 export const Template = () => ({
-  components: { MyComponent },
-  template: '<MyComponent />',
+components: { MyComponent },
+template: '<MyComponent />',
 });
 
 <Story
-  name="NonA11yStory"
-  parameters={{
+name="NonA11yStory"
+parameters={{
     a11y: {
       // This option disables all a11y checks on this story
       disable: true,
     },
   }}>
-  {Template.bind({})}
+{Template.bind({})}
 </Story>
 ```

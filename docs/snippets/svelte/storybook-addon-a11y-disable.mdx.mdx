@@ -16,15 +16,15 @@ import MyComponent from './MyComponent.svelte';
 -->
 
 <Story
-  name="NonA11yStory"
-  parameters={{
+name="NonA11yStory"
+parameters={{
     a11y: {
       // This option disables all a11y checks on this story
       disable: true,
     },
   }}
-  render={() => ({
-    Component: MyComponent,
-    props: {},
-  })} />
+render={() => ({
+Component: MyComponent,
+props: {},
+})} />
 ```

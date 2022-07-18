@@ -16,24 +16,24 @@ import MyComponent from './MyComponent.vue';
 -->
 
 <Story
-  name="ClickExample"
-  play={ async () => {
-    // See https://storybook.js.org/docs/7.0/vue/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
-    await userEvent.click(screen.getByRole('button'));
-  }}
-  render={()=>({
-    components: { MyComponent },
-    template: '<MyComponent/>',
-  })} />
+name="ClickExample"
+play={ async () => {
+// See https://storybook.js.org/docs/7.0/vue/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
+await userEvent.click(screen.getByRole('button'));
+}}
+render={()=>({
+components: { MyComponent },
+template: '<MyComponent/>',
+})} />
 
 <Story
-  name="FireEventExample"
-  play={ async () => {
-    // See https://storybook.js.org/docs/7.0/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
-    await fireEvent.click(screen.getByTestId('data-testid'));
-  }}
-  render={()=>({
-    components: { MyComponent },
-    template: '<MyComponent/>',
-  })} />
+name="FireEventExample"
+play={ async () => {
+// See https://storybook.js.org/docs/7.0/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
+await fireEvent.click(screen.getByTestId('data-testid'));
+}}
+render={()=>({
+components: { MyComponent },
+template: '<MyComponent/>',
+})} />
 ```

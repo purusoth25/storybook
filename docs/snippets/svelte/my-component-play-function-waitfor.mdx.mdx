@@ -16,11 +16,11 @@ import MyComponent from './MyComponent.svelte';
 -->
 
 <Story
-  name="ExampleAsyncStory"
-  play={ async () => {
-    const Input = screen.getByLabelText('Username', {
-      selector: 'input',
-    });
+name="ExampleAsyncStory"
+play={ async () => {
+const Input = screen.getByLabelText('Username', {
+selector: 'input',
+});
 
     await userEvent.type(Input, 'WrongInput', {
       delay: 100,
@@ -33,9 +33,10 @@ import MyComponent from './MyComponent.svelte';
     await waitFor(async () => {
       await userEvent.hover(screen.getByTestId('error'));
     });
-  }}
-  render={(args) => ({
-    Component: MyComponent,
-    props: args,
-  })} />
+
+}}
+render={(args) => ({
+Component: MyComponent,
+props: args,
+})} />
 ```

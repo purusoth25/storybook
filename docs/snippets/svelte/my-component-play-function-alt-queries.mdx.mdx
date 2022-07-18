@@ -16,23 +16,23 @@ import MyComponent from './MyComponent.svelte';
 -->
 
 <Story
-  name="ExampleWithRole"
-  play={ async () => {
-    // See https://storybook.js.org/docs/7.0/svelte/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
-    await userEvent.click(screen.getByRole('button', { name: / button label/i }));
-  }}
-  render={(args) => ({
-    Component: MyComponent,
-    props: args,
-  })} />
+name="ExampleWithRole"
+play={ async () => {
+// See https://storybook.js.org/docs/7.0/svelte/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
+await userEvent.click(screen.getByRole('button', { name: / button label/i }));
+}}
+render={(args) => ({
+Component: MyComponent,
+props: args,
+})} />
 <Story
-  name="ExampleWithText"
-  play={ async () => {
-    // The play function interacts with the component and looks for the text
-    await screen.findByText('example string');
-  }}
-  render={(args) => ({
-    Component: MyComponent,
-    props: args,
-  })} />
+name="ExampleWithText"
+play={ async () => {
+// The play function interacts with the component and looks for the text
+await screen.findByText('example string');
+}}
+render={(args) => ({
+Component: MyComponent,
+props: args,
+})} />
 ```

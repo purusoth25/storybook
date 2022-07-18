@@ -17,29 +17,30 @@ import Button from './Button.svelte';
 />
 
 <!-- 👇 Some function to demonstrate the behavior -->
+
 export const someFunction = (someValue) => {
-  return `i am a ${someValue}`;
+return `i am a ${someValue}`;
 };
 
-
 <!-- 👇 Destructure the label from the args object and assigns the function result to a variable and pass it as a prop into the component -->
+
 <Story
-  name="ExampleStory"
-  args={{
+name="ExampleStory"
+args={{
     primary: true,
     size: 'small',
     label: "button",
   }}>
-  {(args) => {
-    const { label } = args;
-    const functionResult = someFunction(label);
-    return {
-      Component: Button,
-      props: {
-        ...args,
-        label: functionResult,
-      },
-    };
-  }}
+{(args) => {
+const { label } = args;
+const functionResult = someFunction(label);
+return {
+Component: Button,
+props: {
+...args,
+label: functionResult,
+},
+};
+}}
 </Story>
 ```

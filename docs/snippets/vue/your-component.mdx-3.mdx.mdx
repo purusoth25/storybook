@@ -9,14 +9,15 @@ import YourComponent from './YourComponent.vue';
 <Meta title="YourComponent" component={YourComponent} />
 
 <!-- 👇 The args you need here will depend on your component -->
+
 <Story
-  name="FirstStory"
-  args={{}}
-  render={(args) => ({
-    components: { YourComponent },
-    setup() {
-      return { args };
-    },
-    template: `<YourComponent v-bind="args" />`,
-  })} />
+name="FirstStory"
+args={{}}
+render={(args) => ({
+components: { YourComponent },
+setup() {
+return { args };
+},
+template: `<YourComponent v-bind="args" />`,
+})} />
 ```

@@ -16,17 +16,17 @@ import imageFile from './static/image.png';
 -->
 
 export const image = {
-  src: imageFile,
-  alt: 'my image',
+src: imageFile,
+alt: 'my image',
 };
 
-<Story 
-  name="WithAnImage"
-  render={() => ({
-    props: {
-      src: image.src,
-      alt: image.alt,
-    },
-    template: `<img src="{{src}}" alt="{{alt}}" />`,
-  })} />
+<Story
+name="WithAnImage"
+render={() => ({
+props: {
+src: image.src,
+alt: image.alt,
+},
+template: `<img src="{{src}}" alt="{{alt}}" />`,
+})} />
 ```

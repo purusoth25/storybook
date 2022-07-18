@@ -20,7 +20,7 @@ export default {
 export const Primary: Story = {
   render: (args) => createButton(args),
   args: {
-    primary: true, 
+    primary: true,
     label: 'Button',
   },
 };
@@ -28,7 +28,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   render: (args) => createButton(args),
   args: {
-    ...Primary.args, 
+    ...Primary.args,
     label: '😄👍😍💯',
   },
 };
@@ -36,7 +36,7 @@ export const Secondary: Story = {
 export const Tertiary: Story = {
   render: (args) => createButton(args),
   args: {
-    ...Primary.args, 
+    ...Primary.args,
     label: '📚📕📈🤓',
   },
 };

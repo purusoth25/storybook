@@ -8,8 +8,8 @@ import imageFile from './static/image.png'
 <Meta title="img" component={MyComponent}/>
 
 export const image = {
-  src: imageFile,
-  alt: 'my image',
+src: imageFile,
+alt: 'my image',
 };
 
 <!--
@@ -18,17 +18,17 @@ export const image = {
   to learn how to use render functions.
 -->
 
-<Story 
-  name="withAnImage"
-  render={() => ({
-    props: {
-      src: {
-        default: () => image.src,
-      },
-      alt: {
-        default: () => image.alt,
-      },
-    },
-    template: `<img :src="src" :alt="alt"/>`,
-  })} />
+<Story
+name="withAnImage"
+render={() => ({
+props: {
+src: {
+default: () => image.src,
+},
+alt: {
+default: () => image.alt,
+},
+},
+template: `<img :src="src" :alt="alt"/>`,
+})} />
 ```

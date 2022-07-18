@@ -12,17 +12,18 @@ import Button from './Button.vue';
   See https://storybook.js.org/docs/7.0/vue/api/csf
   to learn how to use render functions.
 -->
+
 <Story
-  name="Primary"
-  args={{
+name="Primary"
+args={{
     primary: true,
     label: 'Button',
   }}
-  render={(args) => ({
-    components: { Button },
-    setup() {
-      return { args };
-    },
-    template: '<Button v-bind="args" />',
-  })} />
+render={(args) => ({
+components: { Button },
+setup() {
+return { args };
+},
+template: '<Button v-bind="args" />',
+})} />
 ```

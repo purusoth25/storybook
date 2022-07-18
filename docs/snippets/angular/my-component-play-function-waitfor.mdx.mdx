@@ -16,11 +16,11 @@ import { MyComponent } from './MyComponent.component';
 -->
 
 <Story
-  name="ExampleAsyncStory"
-  play={ async () => {
-    const Input = screen.getByLabelText('Username', {
-      selector: 'input',
-    });
+name="ExampleAsyncStory"
+play={ async () => {
+const Input = screen.getByLabelText('Username', {
+selector: 'input',
+});
 
     await userEvent.type(Input, 'WrongInput', {
       delay: 100,
@@ -34,8 +34,9 @@ import { MyComponent } from './MyComponent.component';
     await waitFor(async () => {
       await userEvent.hover(screen.getByTestId('error'));
     });
-  }}
-  render={(args) => ({
-    props: args,
-  })} />
+
+}}
+render={(args) => ({
+props: args,
+})} />
 ```

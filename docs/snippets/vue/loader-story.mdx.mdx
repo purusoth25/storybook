@@ -14,20 +14,21 @@ import fetch from 'node-fetch';
   See https://storybook.js.org/docs/7.0/vue/api/csf
   to learn how to use render functions.
 -->
+
 <Story
-  name="Primary"
-  loaders={[
-    async () => ({
-      todo: await (
-        await fetch('https://jsonplaceholder.typicode.com/todos/1')
-      ).json(),
-    }),
-  ]}>
-  render={(args, { loaded: { todo } }) => ({
-    components: { TodoItem },
-    setup() {
-      return { args, todo: todo };
-    },
-    template: '<TodoItem :todo="todo" />',
-  })} />
+name="Primary"
+loaders={[
+async () => ({
+todo: await (
+await fetch('https://jsonplaceholder.typicode.com/todos/1')
+).json(),
+}),
+]}>
+render={(args, { loaded: { todo } }) => ({
+components: { TodoItem },
+setup() {
+return { args, todo: todo };
+},
+template: '<TodoItem :todo="todo" />',
+})} />
 ```

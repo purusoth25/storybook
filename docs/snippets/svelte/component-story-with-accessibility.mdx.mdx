@@ -25,27 +25,27 @@ import Button from './Button.svelte';
 ## This is an accessible story
 
 <Story
-  name="Accessible"
-  args={{
-    primary: false, 
+name="Accessible"
+args={{
+    primary: false,
     label: 'Button'
   }}
-  render={(args) => ({
-    Component: Button,
-    props: args,
-  })} />
- 
+render={(args) => ({
+Component: Button,
+props: args,
+})} />
+
 ## This is not
 
 <Story
-  name="Inaccessible"
-  args={{
+name="Inaccessible"
+args={{
     primary: false,
     label: 'Button',
     backgroundColor: 'red'
   }}
-  render={(args) => ({
-    Component: Button,
-    props: args,
-  })} />
+render={(args) => ({
+Component: Button,
+props: args,
+})} />
 ```

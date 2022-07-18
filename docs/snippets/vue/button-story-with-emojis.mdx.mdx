@@ -12,22 +12,23 @@ import Button from './Button.vue';
   See https://storybook.js.org/docs/7.0/vue/api/csf
   to learn how to use render functions.
 -->
-<Story 
-  name="Primary"
-  render={() => ({
-    components: { Button },
-    template: `<Button background="#ff0" label="Button"  />`,
-  })} />
+
 <Story
-  name="Secondary"
-  render={() => ({
-    components: { Button },
-    template: `<Button background="#ff0" label="😄👍😍💯" />`,
-  })} />
+name="Primary"
+render={() => ({
+components: { Button },
+template: `<Button background="#ff0" label="Button" />`,
+})} />
 <Story
-  name="Tertiary"
-  render={() => ({
-    components: { Button },
-    template: `<Button background="#ff0" label="📚📕📈🤓" />`,
-  })} />
+name="Secondary"
+render={() => ({
+components: { Button },
+template: `<Button background="#ff0" label="😄👍😍💯" />`,
+})} />
+<Story
+name="Tertiary"
+render={() => ({
+components: { Button },
+template: `<Button background="#ff0" label="📚📕📈🤓" />`,
+})} />
 ```

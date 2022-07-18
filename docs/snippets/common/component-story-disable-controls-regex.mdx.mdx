@@ -7,39 +7,39 @@ import { YourComponent } from './YourComponent';
 
 <Meta title="YourComponent" component={YourComponent} />
 
-<Story 
-  name="Array Include"
-  parameters={{ 
-    controls: { 
-      include: ['foo', 'bar'] 
-    } 
+<Story
+name="Array Include"
+parameters={{
+    controls: {
+      include: ['foo', 'bar']
+    }
   }}
-  render={() => ({ // Your implementation here })} />
+render={() => ({ // Your implementation here })} />
 
-<Story 
-  name="Regex Include"
-  parameters={{ 
-    controls: { include: 
-      /^hello*/ 
-    } 
+<Story
+name="Regex Include"
+parameters={{
+    controls: { include:
+      /^hello*/
+    }
   }}
-  render={() => ({ // Your implementation here })} />
+render={() => ({ // Your implementation here })} />
 
-<Story 
-  name="Array Exclude"
-  parameters={{ 
-    controls: { 
-      exclude: ['foo', 'bar'] 
-    } 
+<Story
+name="Array Exclude"
+parameters={{
+    controls: {
+      exclude: ['foo', 'bar']
+    }
   }}
-  render={() => ({ // Your implementation here })} />
+render={() => ({ // Your implementation here })} />
 
-<Story 
-  name="Regex Exclude"
-  parameters={{ 
-    controls: { 
-      exclude: /^hello*/ 
-    } 
+<Story
+name="Regex Exclude"
+parameters={{
+    controls: {
+      exclude: /^hello*/
+    }
   }}
-  render={() => ({ // Your implementation here })} />
+render={() => ({ // Your implementation here })} />
 ```

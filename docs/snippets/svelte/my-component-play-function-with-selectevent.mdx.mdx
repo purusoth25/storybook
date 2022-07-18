@@ -12,7 +12,7 @@ import MyComponent from './MyComponent.svelte';
 <!-- Function to emulate pausing between interactions -->
 
 export const sleep(ms) => {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
 <!--
@@ -21,10 +21,10 @@ export const sleep(ms) => {
   to learn how to use render functions.
 -->
 
-<Story 
-  name="ExampleChangeEvent"
-  play={async () => {
-    const select = screen.getByRole('listbox');
+<Story
+name="ExampleChangeEvent"
+play={async () => {
+const select = screen.getByRole('listbox');
 
     await userEvent.selectOptions(select, ['One Item']);
     await sleep(2000);
@@ -34,9 +34,9 @@ export const sleep(ms) => {
 
     await userEvent.selectOptions(select, ['Yet another item']);
 
-  }}
-  render={(args) => ({
-    Component: MyComponent,
-    props: args,
-  })} />
+}}
+render={(args) => ({
+Component: MyComponent,
+props: args,
+})} />
 ```

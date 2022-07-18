@@ -14,13 +14,14 @@ import { Page } from './Page';
 -->
 
 <Story
-  name="CustomFooter"
-  args={{
+name="CustomFooter"
+args={{
     footer: 'Built with Storybook',
   }}
-  render={(args) => (
-    <Page {...args}>
-      <footer>{args.footer}</footer>
-    </Page>
-  )} />
+render={(args) => (
+<Page {...args}>
+
+<footer>{args.footer}</footer>
+</Page>
+)} />
 ```

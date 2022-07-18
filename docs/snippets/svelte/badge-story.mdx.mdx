@@ -12,15 +12,15 @@ import Badge from './Badge.svelte';
 Let's define a story for our `Badge` component:
 
 <Story
-  name="positive"
-  args={{
+name="positive"
+args={{
     status: 'positive',
     label: 'Positive'
-  }} 
-  render={(args) => ({
-    Component: Badge,
-    props: args,
-  })} />
+  }}
+render={(args) => ({
+Component: Badge,
+props: args,
+})} />
 
 We can drop it in a `Canvas` to get a code snippet:
 
