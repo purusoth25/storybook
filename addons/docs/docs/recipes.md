@@ -61,9 +61,9 @@ basic.parameters = {
 
 **Button.stories.mdx**
 
-```md
+```mdx
 import { Meta, Story } from '@storybook/addon-docs';
-import \* as stories from './Button.stories.js';
+import * as stories from './Button.stories.js';
 import { Button } from './Button';
 import { SomeComponent } from 'path/to/SomeComponent';
 
@@ -92,7 +92,7 @@ We recommend [MDX Docs](#csf-stories-with-mdx-docs) as the most ergonomic way to
 
 **Button.mdx**
 
-```md
+```mdx
 import { Story } from '@storybook/addon-docs';
 import { SomeComponent } from 'somewhere';
 
