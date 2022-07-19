@@ -7,6 +7,8 @@ import React, {
   ReactElement,
   StrictMode,
   Fragment,
+  useLayoutEffect,
+  useRef,
 } from 'react';
 import ReactDOM, { version as reactDomVersion } from 'react-dom';
 import type { Root as ReactRoot } from 'react-dom/client';
@@ -32,16 +34,28 @@ export const render: ArgsStoryFn<ReactFramework> = (args, context) => {
   return <Component {...args} />;
 };
 
+const WithCallback: FunctionComponent<{ callback: () => void; children: ReactElement }> = ({
+  callback,
+  children,
+}) => {
+  // See https://github.com/reactwg/react-18/discussions/5#discussioncomment-2276079
+  const once = useRef(false);
+  useLayoutEffect(() => {
+    if (once.current) return;
+    once.current = true;
+    callback();
+  }, [callback]);
+
+  return children;
+};
+
 const renderElement = async (node: ReactElement, el: Element) => {
   // Create Root Element conditionally for new React 18 Root Api
   const root = await getReactRoot(el);
 
   return new Promise((resolve) => {
     if (root) {
-      root.render(node);
-      setTimeout(() => {
-        resolve(null);
-      }, 0);
+      root.render(<WithCallback callback={() => resolve(null)}>{node}</WithCallback>);
     } else {
       ReactDOM.render(node, el, () => resolve(null));
     }
