@@ -1,6 +1,7 @@
 import fs from 'fs-extra';
 import remarkSlug from 'remark-slug';
 import remarkExternalLinks from 'remark-external-links';
+import remarkGfm from 'remark-gfm';
 import global from 'global';
 
 import type { DocsOptions, IndexerOptions, Options, StoryIndexer } from '@storybook/core-common';
@@ -55,7 +56,9 @@ export async function webpack(
 
   const mdxLoaderOptions = {
     skipCsf: true,
-    remarkPlugins: [remarkSlug, remarkExternalLinks],
+    remarkPlugins: global.FEATURES?.previewMdx2
+      ? [remarkSlug, remarkExternalLinks, remarkGfm]
+      : [remarkSlug, remarkExternalLinks],
   };
 
   const mdxVersion = global.FEATURES?.previewMdx2 ? 'MDX2' : 'MDX1';
