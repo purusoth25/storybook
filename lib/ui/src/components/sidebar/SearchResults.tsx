@@ -129,14 +129,7 @@ const Result: FC<
       api.emit(
         PRELOAD_ENTRIES,
         { ids: [item.isLeaf ? item.id : item.children[0]] },
-        {
-          options: {
-            target:
-              item.refId && item.refId !== 'storybook_internal'
-                ? `storybook-ref-${item.refId}`
-                : 'storybook-preview-iframe',
-          },
-        }
+        { options: { target: item.refId } }
       );
     }
   }, [props.isHighlighted, item]);
