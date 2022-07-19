@@ -238,7 +238,7 @@ export class PreviewWeb<TFramework extends AnyFramework> extends Preview<TFramew
   async onPreloadStories({ ids }: { ids: string[] }) {
     await Promise.all(
       ids.map((id) =>
-        this.storyStore.loadStory({ storyId: id }).catch(() => {
+        this.storyStore.loadEntry(id).catch(() => {
           /**
            * It's possible that we're trying to preload a story in a ref we haven't loaded the iframe for yet.
            * Because of the way the targeting works, if we can't find the targeted iframe,

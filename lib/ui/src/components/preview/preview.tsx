@@ -164,12 +164,7 @@ const Preview = React.memo<PreviewProps>((props) => {
           api.emit(SET_CURRENT_STORY, {
             storyId: id,
             viewMode,
-            options: {
-              target:
-                refId && refId !== 'storybook_internal'
-                  ? `storybook-ref-${refId}`
-                  : 'storybook-preview-iframe',
-            },
+            options: { target: refId },
           });
         }
       }

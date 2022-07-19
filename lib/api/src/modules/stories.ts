@@ -323,12 +323,7 @@ export const init: ModuleFn<SubAPI, SubState, true> = ({
       fullAPI.emit(UPDATE_STORY_ARGS, {
         storyId,
         updatedArgs,
-        options: {
-          target:
-            refId && refId !== 'storybook_internal'
-              ? `storybook-ref-${refId}`
-              : 'storybook-preview-iframe',
-        },
+        options: { target: refId },
       });
     },
     resetStoryArgs: (story, argNames?: [string]) => {
@@ -336,12 +331,7 @@ export const init: ModuleFn<SubAPI, SubState, true> = ({
       fullAPI.emit(RESET_STORY_ARGS, {
         storyId,
         argNames,
-        options: {
-          target:
-            refId && refId !== 'storybook_internal'
-              ? `storybook-ref-${refId}`
-              : 'storybook-preview-iframe',
-        },
+        options: { target: refId },
       });
     },
     fetchStoryList: async () => {
@@ -468,12 +458,7 @@ export const init: ModuleFn<SubAPI, SubState, true> = ({
 
         fullAPI.emit(PRELOAD_STORIES, {
           ids: toBePreloaded,
-          options: {
-            target:
-              refId && refId !== 'storybook_internal'
-                ? `storybook-ref-${refId}`
-                : 'storybook-preview-iframe',
-          },
+          options: { target: refId },
         });
       }
     });

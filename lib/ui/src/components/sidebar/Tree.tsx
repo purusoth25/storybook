@@ -250,12 +250,7 @@ const Node = React.memo<NodeProps>(
           if (item.isComponent) {
             api.emit(PRELOAD_STORIES, {
               ids: [item.children[0]],
-              options: {
-                target:
-                  refId && refId !== 'storybook_internal'
-                    ? `storybook-ref-${refId}`
-                    : 'storybook-preview-iframe',
-              },
+              options: { target: refId },
             });
           }
         }}
