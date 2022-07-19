@@ -1,7 +1,7 @@
 import global from 'global';
 import { toId, sanitize } from '@storybook/csf';
 import {
-  PRELOAD_STORIES,
+  PRELOAD_ENTRIES,
   STORY_PREPARED,
   UPDATE_STORY_ARGS,
   RESET_STORY_ARGS,
@@ -456,7 +456,7 @@ export const init: ModuleFn<SubAPI, SubState, true> = ({
           ])
         ).filter(Boolean);
 
-        fullAPI.emit(PRELOAD_STORIES, {
+        fullAPI.emit(PRELOAD_ENTRIES, {
           ids: toBePreloaded,
           options: { target: refId },
         });

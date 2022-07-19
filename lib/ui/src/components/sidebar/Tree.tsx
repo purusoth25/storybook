@@ -5,7 +5,7 @@ import { Button, Icons } from '@storybook/components';
 import { transparentize } from 'polished';
 import React, { MutableRefObject, useCallback, useMemo, useRef } from 'react';
 
-import { PRELOAD_STORIES } from '@storybook/core-events';
+import { PRELOAD_ENTRIES } from '@storybook/core-events';
 import {
   ComponentNode,
   DocumentNode,
@@ -248,7 +248,7 @@ const Node = React.memo<NodeProps>(
         }}
         onMouseEnter={() => {
           if (item.isComponent) {
-            api.emit(PRELOAD_STORIES, {
+            api.emit(PRELOAD_ENTRIES, {
               ids: [item.children[0]],
               options: { target: refId },
             });

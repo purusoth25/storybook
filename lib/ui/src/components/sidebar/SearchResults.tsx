@@ -11,7 +11,7 @@ import React, {
 import { ControllerStateAndHelpers } from 'downshift';
 
 import { useStorybookApi } from '@storybook/api';
-import { PRELOAD_STORIES } from '@storybook/core-events';
+import { PRELOAD_ENTRIES } from '@storybook/core-events';
 import { ComponentNode, DocumentNode, Path, RootNode, StoryNode } from './TreeNode';
 import {
   Match,
@@ -133,7 +133,7 @@ const Result: FunctionComponent<
   useEffect(() => {
     if (api && props.isHighlighted && item.isComponent) {
       api.emit(
-        PRELOAD_STORIES,
+        PRELOAD_ENTRIES,
         { ids: [item.isLeaf ? item.id : item.children[0]] },
         {
           options: {
@@ -231,7 +231,7 @@ export const SearchResults: FunctionComponent<{
       const item = api.getData(storyId, refId === 'storybook_internal' ? undefined : refId);
 
       if (item.isComponent) {
-        api.emit(PRELOAD_STORIES, {
+        api.emit(PRELOAD_ENTRIES, {
           ids: [item.isLeaf ? item.id : item.children[0]],
           options: { target: refId },
         });

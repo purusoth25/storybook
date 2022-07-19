@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { useStorybookApi } from '@storybook/api';
-import { PRELOAD_STORIES } from '@storybook/core-events';
+import { PRELOAD_ENTRIES } from '@storybook/core-events';
 import { matchesKeyCode, matchesModifiers } from '../../keybinding';
 
 import { CombinedDataset, Highlight, Selection } from './types';
@@ -117,7 +117,7 @@ export const useHighlighted = ({
           const { itemId, refId } = highlightedRef.current;
           const item = api.getData(itemId, refId === 'storybook_internal' ? undefined : refId);
           if (item.isComponent) {
-            api.emit(PRELOAD_STORIES, {
+            api.emit(PRELOAD_ENTRIES, {
               ids: [item.isLeaf ? item.id : item.children[0]],
               options: { target: refId },
             });

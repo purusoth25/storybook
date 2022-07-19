@@ -4,7 +4,7 @@ import global from 'global';
 import {
   CURRENT_STORY_WAS_SET,
   IGNORED_EXCEPTION,
-  PRELOAD_STORIES,
+  PRELOAD_ENTRIES,
   PREVIEW_KEYDOWN,
   SET_CURRENT_STORY,
   SET_STORIES,
@@ -94,7 +94,7 @@ export class PreviewWeb<TFramework extends AnyFramework> extends Preview<TFramew
 
     this.channel.on(SET_CURRENT_STORY, this.onSetCurrentStory.bind(this));
     this.channel.on(UPDATE_QUERY_PARAMS, this.onUpdateQueryParams.bind(this));
-    this.channel.on(PRELOAD_STORIES, debounce(this.onPreloadStories.bind(this), 200));
+    this.channel.on(PRELOAD_ENTRIES, debounce(this.onPreloadStories.bind(this), 200));
   }
 
   initializeWithProjectAnnotations(projectAnnotations: WebProjectAnnotations<TFramework>) {
