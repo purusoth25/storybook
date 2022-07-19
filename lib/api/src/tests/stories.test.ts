@@ -550,7 +550,7 @@ describe('stories API', () => {
         storyId: 'a--1',
         updatedArgs: { foo: 'bar' },
         options: {
-          target: 'storybook-preview-iframe',
+          target: undefined,
         },
       });
 
@@ -581,12 +581,12 @@ describe('stories API', () => {
         storyId: 'a--1',
         updatedArgs: { foo: 'bar' },
         options: {
-          target: 'storybook-ref-refId',
+          target: 'refId',
         },
       });
     });
 
-    it('resetStoryArgs emits RESET_STORY_ARGS to the local frame and does not change anything', () => {
+    it('refId to the local frame and does not change anything', () => {
       const navigate = jest.fn();
       const emit = jest.fn();
       const on = jest.fn();
@@ -608,7 +608,7 @@ describe('stories API', () => {
         storyId: 'a--1',
         argNames: ['foo'],
         options: {
-          target: 'storybook-preview-iframe',
+          target: undefined,
         },
       });
 
@@ -639,7 +639,7 @@ describe('stories API', () => {
         storyId: 'a--1',
         argNames: ['foo'],
         options: {
-          target: 'storybook-ref-refId',
+          target: 'refId',
         },
       });
     });
